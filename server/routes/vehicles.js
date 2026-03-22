@@ -1,0 +1,9 @@
+const express = require('express');
+const router = express.Router();
+const vehicleController = require('../controllers/vehicleController');
+
+router.get('/', vehicleController.getAllVehicles);
+router.get('/filter', vehicleController.filterVehicles);
+router.get('/:id', vehicleController.getVehicleById);
+
+module.exports = router;
